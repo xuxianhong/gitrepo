@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>my first paragraph</h1>
+<p>please input something</p>
+<input id="demo" type="text">
+<script>
+	function myfunction()
+	{
+		var x=document.getElementById("demo").value;
+		if (x==""||isNaN(x)) 
+			{
+				alert("error");
+			};
+	}
+</script>
+<button type="button" onclick="myfunction()">click here</button>
+</body>
+</html>

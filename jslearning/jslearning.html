@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+	</head>
+	<body>
+		<h1>jslearning</h1>
+		<p>
+			JavaScript 能够直接写入HTML输出流中
+		</p>
+		<p id='changehtml'>
+			change me,come on
+		</p>
+		<input id='inputcheck' type="text">
+		<script>
+			document.write("<h2>js.document.write</h2>");
+			document.write("<p>jsdocument.writep</p>");
+			function myFunction001()
+			{
+				x=document.getElementById('changehtml');
+				x.innerHTML="Hello JavaScript";
+			}
+			function myFunction002()
+			{
+				var x=document.getElementById('inputcheck').value;
+				if(x==""||isNaN(x))
+					{
+					alert("Not Numeric");
+					}
+			}
+			function myFunction()
+			{
+				var x=document.getElementById("inputcheck").value;
+				if(x==""||isNaN(x))
+					{
+						alert("Not Numeric");
+					}
+			}
+		</script>
+		<button onclick="myFunction001()">click001</button>
+		<button type="button" onclick="myFunction002()">click002</button>
+		<p>
+			只能在HTML输出流中使用 document.write
+			如果在文档已加载后使用它，会覆盖整个文档
+		</p>	
+	</body>
+</html>
